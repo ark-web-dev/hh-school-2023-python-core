@@ -16,7 +16,7 @@ class Market:
         :param title:
         :return: True|False
         """
-        return title in self.wines or title in self.beers if title else bool
+        return title in self.wines or title in self.beers if title else False
 
     @start_end_log_decorator
     def get_drinks_sorted_by_title(self) -> list:
