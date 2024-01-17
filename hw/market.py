@@ -40,9 +40,10 @@ class Market:
 
         from_date = convert_string_to_date(from_date)
         to_date = convert_string_to_date(to_date)
+        drinks = filter(lambda x: x.production_date is not None, self.allDrinks)
         valid_drinks = []
 
-        for drink in self.allDrinks:
+        for drink in drinks:
             if from_date <= drink.production_date <= to_date:
                 valid_drinks.append(drink)
         
