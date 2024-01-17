@@ -9,7 +9,7 @@ wines = [
     Wine('Syrah', convert_string_to_date('2008-06-30')),
     Wine('Malbec', convert_string_to_date('2013-04-05')),
     Wine('Chardonnay', convert_string_to_date('2019-09-12')),
-    Wine('Sauvignon Blanc', convert_string_to_date('2017-12-25')),
+    Wine(None, convert_string_to_date('2017-12-25')),
 ]
 
 beers = [

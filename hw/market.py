@@ -25,7 +25,8 @@ class Market:
 
         :return: list
         """
-        return sorted(self.allDrinks, key = lambda drink: drink.title)
+        drinks = filter(lambda x: x.title is not None, self.allDrinks)
+        return sorted(drinks, key = lambda drink: drink.title)
 
     @start_end_log_decorator
     def get_drinks_by_production_date(self, from_date=None, to_date=None) -> list:
