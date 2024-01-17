@@ -23,3 +23,4 @@ print(f'Жигули в наличии: {market.has_drink_with_title("Zhigulevsk
 print('\n * получить список напитков (вина и пива) в указанном диапазоне даты производства')
 for drink in market.get_drinks_by_production_date('2018-01-18', '2022-01-22'):
     print(drink.title, drink.production_date)
+    

@@ -21,4 +21,3 @@ beers = [
     Beer('Sierra Nevada Pale Ale', convert_string_to_date('2010-10-15')),
     Beer('Blue Moon Belgian White', convert_string_to_date('2018-04-22')),
 ]
-
