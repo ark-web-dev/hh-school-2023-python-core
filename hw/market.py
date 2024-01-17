@@ -35,6 +35,9 @@ class Market:
 
         :return: list
         """
+        if not (from_date and to_date):
+            return []
+
         from_date = convert_string_to_date(from_date)
         to_date = convert_string_to_date(to_date)
         valid_drinks = []
