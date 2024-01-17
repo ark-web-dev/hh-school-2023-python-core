@@ -4,18 +4,8 @@ from utils import convert_string_to_date
 class Market:
     @start_end_log_decorator
     def __init__(self, wines: list = None, beers: list = None) -> None:
-        winesDct = {}
-        if wines:
-            for wine in wines:
-                winesDct[wine.title] =  wine
-
-        beersDct = {}
-        if beers:
-            for beer in beers:
-                beersDct[beer.title] =  beer
-
-        self.wines = winesDct
-        self.beers = beersDct
+        self.wines = {wine.title: wine for wine in wines} if wines else {}
+        self.beers = {beer.title: beer for beer in beers} if beers else {}
         self.allDrinks = wines + beers if wines and beers else []
 
     @start_end_log_decorator
