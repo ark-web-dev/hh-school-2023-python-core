@@ -6,8 +6,8 @@ class Market:
     def __init__(self, wines: list = None, beers: list = None) -> None:
         self.wines = {wine.title: wine for wine in wines} if wines else {}
         self.beers = {beer.title: beer for beer in beers} if beers else {}
-        self.allDrinks = wines + beers if wines and beers else []
-
+        self.allDrinks = (wines or []) + (beers or [])
+ 
     @start_end_log_decorator
     def has_drink_with_title(self, title=None) -> bool:
         """
